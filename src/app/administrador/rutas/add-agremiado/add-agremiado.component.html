@@ -1,0 +1,143 @@
+<header class="navbar bg-success navbar-expand-lg">
+  <span><b>Agregar Agremiado</b></span>
+  <a class="back-button bg-danger" (click)="goToDashboardAdministrador()"><i class="fas fa-arrow-left"></i> Regresar</a>
+</header>
+
+<hr>
+
+<div class="container mt-5">
+  <h2 class="text-center text-success" >Agregar Agremiado</h2>
+  <br>
+  <form [formGroup]="agregarAgremiadoForm" (ngSubmit)="agregarAgremiado()">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="apellidoPaterno"><b>Apellido Paterno:</b></label>
+            <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno"
+              formControlName="apellidoPaterno">
+              <div *ngIf="campoTocado('apellidoPaterno') && !campoValido('apellidoPaterno')">
+                <small class="text-danger">Apellido Paterno es obligatorio.</small>
+              </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="apellidoMaterno"><b>Apellido Materno:</b></label>
+            <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno"
+              formControlName="apellidoMaterno">
+              <div *ngIf="campoTocado('apellidoMaterno') && !campoValido('apellidoMaterno')">
+                <small class="text-danger">Apellido Materno es obligatorio.</small>
+              </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="nombre"><b>Nombre(s):</b></label>
+            <input type="text" class="form-control" id="nombre" name="nombre" formControlName="nombre">
+            <div *ngIf="campoTocado('nombre') && !campoValido('nombre')">
+              <small class="text-danger">El nombre es obligatorio.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="nup"><b>NUP:</b></label>
+            <input type="text" class="form-control" id="nup" name="nup" formControlName="nup">
+            <div *ngIf="campoTocado('nup') && !campoValido('nup')">
+              <small class="text-danger">El NUP es obligatorio.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="nue"><b>NUE:</b></label>
+            <input type="text" class="form-control" id="nue" name="nue" formControlName="nue">
+            <div *ngIf="campoTocado('nue') && !campoValido('nue')">
+              <small class="text-danger">El NUE es obligatorio.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="rfc"><b>RFC:</b></label>
+            <input type="text" class="form-control" id="rfc" name="rfc" formControlName="rfc">
+            <div *ngIf="campoTocado('rfc') && !campoValido('rfc')">
+              <small class="text-danger">El RFC es obligatorio.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="nss"><b>NSS:</b></label>
+            <input type="text" class="form-control" id="nss" name="nss" formControlName="nss">
+            <div *ngIf="campoTocado('nss') && !campoValido('nss')">
+              <small class="text-danger">El NSS es obligatorio.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="fechaNacimiento"><b>Fecha de Nacimiento:</b></label>
+            <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
+              formControlName="fechaNacimiento">
+              <div *ngIf="campoTocado('fechaNacimiento') && !campoValido('fechaNacimiento')">
+                <small class="text-danger">La fecha de nacimiento es obligatoria.</small>
+              </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="telefono"><b>Teléfono:</b></label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" formControlName="telefono">
+            <div *ngIf="campoTocado('telefono') && !campoValido('telefono')">
+              <small class="text-danger">El telefono es obligatorio.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="cuotaPagada"><b>Cuota Pagada:</b></label>
+            <select class="form-control" id="cuotaPagada" name="cuotaPagada" formControlName="cuotaPagada">
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+            <div *ngIf="campoTocado('cuotaPagada') && !campoValido('cuotaPagada')">
+              <small class="text-danger">La cuota es obligatoria.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="genero"><b>Género:</b></label>
+            <select class="form-control" id="genero" name="genero" formControlName="genero">
+              <option value="hombre">Hombre</option>
+              <option value="mujer">Mujer</option>
+              <option value="noEspecificado">Prefiero no decirlo</option>
+            </select>
+            <div *ngIf="campoTocado('genero') && !campoValido('genero')">
+              <small class="text-danger">El género es obligatorio.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <button type="button" class="btn btn-success" (click)="agregarAgremiado()" [disabled]="agregarAgremiadoForm.invalid">Agregar Agremiado</button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>

@@ -1,0 +1,45 @@
+<header>
+  <span><b>Listado de Solicitudes</b></span>
+  <a class="back-button bg-danger" (click)="goToDashboardAdministrador()"><i class="fas fa-arrow-left"></i> Regresar</a>
+</header>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col" size="2">
+      <label  for="fechaInicio"><b>Fecha de Inicio:</b></label>
+    </div>
+    <div class="col" size="2">
+      <input type="date" id="fechaInicio" name="fechaInicio">
+    </div>
+    <div class="col" size="2">
+      <label for="fechaFin"><b>Fecha de Fin:</b></label>
+    </div>
+    <div class="col" size="2">
+      <input type="date" id="fechaFin" name="fechaFin">
+    </div>
+    <div class="col" size="2">
+      <button class="btn btn-primary ml-2" (click)="filtrarPorFechas()">Filtrar</button>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<table id="datatableSolicitudes" class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th class="bg-success">NUE</th>
+      <th class="bg-success">Fechar</th>
+      <th class="bg-success">Descargar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let solicitud of solicitudes">
+      <td>{{ solicitud.NUE }}</td>
+      <td>{{ solicitud.FECHA }}</td>
+      <td><button class="btn btn-danger">DESCARGAR PDF</button></td>
+    </tr>
+  </tbody>
+</table>

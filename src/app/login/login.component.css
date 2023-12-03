@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.thumbnail img {
+  max-width: 100%;
+  height: auto;
+  width: 60%;
+  border-radius: 20px;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(232, 238, 241);
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 7px;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.menu-container ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-container li {
+  margin-bottom: 10px;
+}
+
+.menu-container button {
+  background-color: rgb(184, 185, 75);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-container button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.login-page {
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #7686d7;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #1c36b9;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.form .register-form {
+  display: none;
+}
+
+body {
+  background: #76b852;
+  background: rgb(141, 194, 111);
+  background: linear-gradient(90deg, rgba(141, 194, 111, 1) 0%, rgba(118, 184, 82, 1) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 80%;
+    padding: 25px;
+  }
+
+  .form input,
+  .form button {
+    padding: 10px;
+  }
+
+  .container{
+    color: #7686d7;
+  }
+}

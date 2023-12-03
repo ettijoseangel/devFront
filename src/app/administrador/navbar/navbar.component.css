@@ -1,0 +1,32 @@
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav a {
+  color: #fff; /* Color del texto por defecto */
+  padding: 0.5rem 1rem; /* Ajusta el espaciado interno */
+  border-radius: 5px; /* Borde redondeado */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav a:hover {
+  background-color: #000; /* Color de fondo al pasar el cursor */
+  color: #fff; /* Color del texto al pasar el cursor */
+}
+
+.navbar-nav .cerrar-sesion a {
+  background-color: #fff; /* Color de fondo por defecto */
+  color: #000; /* Color del texto por defecto */
+}
+
+.navbar-nav .cerrar-sesion a:hover {
+  background-color: #000; /* Color de fondo al pasar el cursor */
+  color: #fff; /* Color del texto al pasar el cursor */
+}
+
+.title {
+  font-size: 1.5rem; /* Tamaño de fuente más grande, ajusta según sea necesario */
+  color: #fff; /* Color del texto del título */
+  margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+}
